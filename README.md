@@ -20,7 +20,15 @@ Preload monitors which applications you use and learns your usage patterns throu
 
 ## Quick Install
 
-### Using the Install Script
+### Using Precompiled Binary
+
+```bash
+git clone https://github.com/miguel-b-p/preload-ng.git
+cd preload-ng/scripts
+sudo bash install.sh
+```
+
+### Building from Source
 
 ```bash
 git clone https://github.com/miguel-b-p/preload-ng.git
@@ -62,7 +70,7 @@ Add to your `flake.nix`:
 }
 ```
 
-> **TODO:** Add NixOS module options to configure `/etc/preload.conf` settings declaratively (e.g., `services.preload.settings.cycle`, `services.preload.settings.memfree`, etc.).
+> All settings from `preload.conf` are available as declarative options via `services.preload-ng.settings`. A `debug` option is also available to enable verbose output. See [doc/README.md](doc/README.md#nixos-declarative-configuration) for the complete configuration reference.
 
 ---
 
